@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    
+
+    
+<style>
+   
+  body {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #dcb6ac, #feb47b);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            padding: 30px 50px;     
+            transition: transform 0.3s ease;
+            align-content: center;
+            
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+            align-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #9af676;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+      
+    
+</style>
+    <script type="text/javascript">
+    function greeting() {
+        alert("wrong username or password please try it again")
+    }
+</script>
+
+</head> 
+<body>
+    <h1 id="msg"></h1>
+   <div class = container >
+    <img src="https://static.vecteezy.com/system/resources/previews/021/919/677/original/login-icon-in-trendy-flat-style-isolated-on-white-background-approach-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-flat-style-for-graphic-design-vector.jpg"alt="Circular Image" style="width: 150px; height: 150px; border-radius: 50%;">
+           <marquee> WARNING ENTER THE CORRECT PASSWORD
+        </marquee>
+        <h2>Login</h2>
+    <form action="connect.php" method="post" ></form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" value ="name1234" name="username" required ><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" value="name@1234"name="password" required><br><br>
+         <a href='https://ide.geeksforgeeks.org/'> 
+        
+            <input type="submit"onclick="greeting()"value="submit"id="sub">
+            
+         
+    </a><br>
+       <a href="https://utkarsh2006.pyscriptapps.com/aged-boat/latest/">forgot password</a><br>
+        <a href="https://utkarsh2006.pyscriptapps.com/wild-queen/latest/">create an account</a><br>
+    </form>
+       <script>
+           
+           let document.querySelector("form");
+           form.addEventListener('submit',(e)=>{
+               e.preventDefault();
+               document.querySelector("sub").value="submiting..";
+               let data = new FormData(form);
+               fetch('https://script.google.com/macros/s/AKfycbwq5r1LeolR9g8OfOr6Ix3R7ntKStOPniIheb8k0gT7vJEa4ctbrqytj9fa8cHBkUMZ/exec',{
+                    method:"POST",
+                   body: data
+               })
+                  .then(res => res.text());
+                  .then(data => console.log(data));
+           })
+       </script>
+    
+
+   </div>
+    
+
+</body>
+</html>
